@@ -1,0 +1,35 @@
+a{
+
+font-style: italic;
+
+font-weight: bold;
+padding:10px 20px;
+background-color:gray ;
+border-radius: 10px;
+text-decoration: none;
+transition: all 0.5s ease-in-out;
+}
+a:link{
+    color: yellow;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: red;
+    font-size: 20px;
+    border-radius: 30px;
+}
+a:active{
+    color: green;
+    border-radius: 30px;
+}
+#rot{
+    transition: 3s all linear;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+#rot:hover{
+    transform: rotate(360deg);
+}
