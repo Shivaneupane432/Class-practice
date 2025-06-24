@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Product Cards with Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Nav Bar Box -->
+  <div class="navbar-box">
+    <div class="navbar">
+      <div class="logo">MyBrand</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+      </nav>
+      <button id="loginBtn" class="login-button">Login</button>
+    </div>
+  </div>
+
+  <!-- Modal for Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Login</h3>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="submitLogin">Submit</button>
+    </div>
+  </div>
+
+  <main>
+      <div class="card">
+          <img src="images (1).jfif" alt="Image 1" />
+          <h2>Card One</h2>
+          <p>Classic white cotton T-shirt, soft and breathable for everyday wear.</p>
+          <p class="price">50$</p>
+      </div>
+
+      <div class="card">
+          <img src="images.jfif" alt="Image 2" />
+          <h2>Card Two</h2>
+          <p>Stylish black T-shirt with modern fit and premium fabric blend.</p>
+          <p class="price">50$</p>
+      </div>
+
+      <div class="card">
+          <img src="download (2).jfif" alt="Image 3" />
+          <h2>Card Three</h2>
+          <p>Graphic T-shirt featuring bold design, perfect for casual outings.</p>
+          <p class="price">50$</p>
+      </div>
+
+      <div class="card">
+          <img src="download (1).jfif" alt="Image 4" />
+          <h2>Card Four</h2>
+          <p>Lightweight blue T-shirt, ideal for summer days and relaxed weekends.</p>
+          <p class="price">50$</p>
+      </div>
+
+      <div class="card">
+          <img src="download.jfif" alt="Image 5" />
+          <h2>Card Five</h2>
+          <p>Comfortable and durable T-shirt with a minimalist look.</p>
+          <p class="price">50$</p>
+      </div>
+  </main>
+
+<script>
+  // Modal open/close logic
+  const loginBtn = document.getElementById('loginBtn');
+  const modal = document.getElementById('loginModal');
+  const closeBtn = document.querySelector('.close');
+
+  loginBtn.onclick = () => modal.style.display = 'block';
+  closeBtn.onclick = () => modal.style.display = 'none';
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  };
+
+  // Optionally add login submit behavior
+  document.getElementById('submitLogin').onclick = () => {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    alert(`Username: ${username}\nPassword: ${password}`);
+    modal.style.display = 'none';
+  };
+</script>
+
+</body>
+</html>
